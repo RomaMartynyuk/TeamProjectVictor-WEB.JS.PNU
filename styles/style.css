@@ -1,3 +1,4 @@
+/*Navigation bar*/
 body {
     padding: 0;
     margin: 0;
@@ -12,6 +13,9 @@ nav {
     top: 0;
     width: 100%;
     height: 80px;
+}
+button {
+    font-family: 'Montserrat', sans-serif;
 }
 nav li p {
     margin-top: 15px;
@@ -62,4 +66,157 @@ nav li p {
 }
 #square-pnu img {
     margin-top: -5px;
+}
+/*Main Page*/
+.welcome-text {
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    padding-top: 80px;
+    width: 100%;
+    height: 1080px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.welcome-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    max-width: 500px;
+    padding-left: 75px;
+}
+.welcome-text p {
+    font-size: 24px;
+    max-width: 500px;
+    padding-left: 75px;
+}
+.welcome-text button {
+    width: 300px;
+    height: 90px;
+    border-radius: 15px;
+    border-width: 0;
+    background-color: #2B2B2B;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 75px;
+}
+.main-page .categories-header {
+    margin-left: 75px;
+    font-size: 64px;
+    font-weight: 800;
+    color: #fff;
+}
+.categories {
+    display: grid;
+    gap: 50px 100px;
+    padding: 50px;
+    grid-template-columns: auto auto auto;
+}
+.categories-card {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    height: 300px;
+    cursor: pointer;
+}
+.categories-card img {
+    height: 130px;
+    width: 130px;
+    padding: 32px;
+    float: left;
+}
+.categories h2 {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 600;
+    padding: 45px;
+}
+.courier, .partners {
+    box-sizing: border-box;
+    display: table;
+    clear: both;
+    padding: 70px;
+}
+.courier-img, .partners-img {
+    float: left;
+    border-radius: 15px;
+    width: 713px;
+}
+.courier-text, .partners-text {
+    float: right;
+    height: 480px;
+    padding-left: 250px;
+    color: #fff;
+}
+.courier-text h2, .partners-text h2 {
+    font-size: 40px;
+    font-weight: 800;
+}
+.courier-text p, .partners-text p {
+    font-size: 32px;
+    max-width: 630px;
+}
+.courier-text button, .partners-text button, .game-link button {
+    border-radius: 15px;
+    border-width: 0;
+    width: 320px;
+    height: 90px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+.partners-img {
+    float: right;
+    padding-right: 70px;
+}
+.partners-text {
+    float: left;
+    padding-right: 250px;
+    padding-left: 0px;
+}
+.game-link {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 100%), url("../images/partner.png");
+    background-size: cover;
+    background-position: center;
+    width: 1450px;
+    height: 480px;
+    border-radius: 15px;
+    color: #fff;
+}
+.game-link h2 {
+    font-size: 40px;
+    font-weight: 800;
+}
+.game-link p {
+    font-size: 32px;
+    width: 650px;
+}
+footer {
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+}
+footer img {
+    height: 52px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
