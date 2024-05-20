@@ -1,6 +1,6 @@
 (function (global){
 
-    const bh = {};
+    const av = {};
 
     const homeHtml = "snippets/home-snippets.html";
     const allCategoriesUrl = "data/categories.json";
@@ -45,10 +45,10 @@
 
     document.addEventListener("DOMContentLoaded", function(event) {
         
-        showLoading("#main");
+        showLoading("#main-page");
         loadHomeHtml();
         document.querySelector("#navHomeButton").addEventListener("click", loadHomeHtml);
-        document.querySelector("#navLogo").addEventListener("click", function (){
+        document.querySelector("img").addEventListener("click", function (){
             window.location.reload();
         });
     });
@@ -59,37 +59,22 @@
             function (responseText) {
                 switchActive("home");
 
-                document.querySelector("#main").innerHTML = responseText;
+                document.querySelector("#main-page").innerHTML = responseText;
             },
             false
         );
     };
     
-
-    bh.loadRandomCategory = function() {
-        showLoading("#main");
-    
-        $ajaxifyJS.sendGetRequest(
-            allCategoriesUrl,
-            function(categories) {
-                const randomIndex = Math.floor(Math.random() * categories.length);
-                const randomCategory = categories[randomIndex];
-                bh.loadCatalogItems(randomCategory.short_name);
-            }
-        );
-    };
-    
-
-    bh.loadCatalogCategories = function () {
-        showLoading("#main");
+    av.loadCatalogCategories = function () {
+        showLoading("#main-page");
 
         $ajaxifyJS.sendGetRequest(
             allCategoriesUrl,
             buildAndShowCategoriesHTML);
     };
 
-    bh.loadCatalogItems = function (categoryShort) {
-        showLoading("#main");
+    av.loadCatalogItems = function (categoryShort) {
+        showLoading("#main-page");
 
         $ajaxifyJS.sendGetRequest(
             catalogItemsUrl + categoryShort + ".json",
@@ -104,7 +89,7 @@
                 switchActive("catalog");
 
                 const categoriesViewHtml = buildCategoriesViewHtml(categories, categoryHtml);
-                insertHtml("#main", categoriesViewHtml);
+                insertHtml("#main-page", categoriesViewHtml);
             },
             false);
     }
@@ -112,7 +97,9 @@
 
     function buildCategoriesViewHtml (categories, categoryHtml) {
         
-        let finalHtml = "<div class='catalog'>";
+        let finalHtml = "<div class='categories-page'>";
+        finalHtml += "<h1 class='categories-header'>Категорії</h1>";
+        finalHtml += "<div class='categories'>";
 
         for (let i = 0; i < categories.length; i++) {
             let html = categoryHtml;
@@ -123,6 +110,7 @@
             finalHtml += html;
         }
 
+        finalHtml += "</div>";
         finalHtml += "</div>";
         return finalHtml;
     }
@@ -138,7 +126,7 @@
                         switchActive("catalog");
 
                         const catalogItemViewHtml = buildCatalogItemsViewHtml(categoryCatalogItems, catalogItemsTitleHtml, catalogItemHtml);
-                        insertHtml("#main", catalogItemViewHtml);
+                        insertHtml("#main-page", catalogItemViewHtml);
                     },
                     false);
             },
@@ -150,8 +138,9 @@
         
         catalogItemsTitleHtml = insertProperty(catalogItemsTitleHtml, "full_name", categoryCatalogItems.category.full_name);
 
-        let finalHtml = catalogItemsTitleHtml;
-        finalHtml += "<div class='catalog'>";
+        let finalHtml = "<div class='products-page'>";
+        finalHtml = catalogItemsTitleHtml;
+        finalHtml += "<div class='products'>";
 
         const catalogItems = categoryCatalogItems.catalog_items;
         const catShortName = categoryCatalogItems.category.short_name;
@@ -162,17 +151,17 @@
             html = insertProperty(html, "catShortName", catShortName);
             html = insertProperty(html, "short_name", catalogItems[i].short_name);
             html = insertProperty(html, "full_name", catalogItems[i].full_name);
-            html = insertProperty(html, "author", catalogItems[i].author);
             html = insertProperty(html, "description", catalogItems[i].description);
             html = insertProperty(html, "price", catalogItems[i].price); 
             finalHtml += html;
         }
 
         finalHtml += "</div>";
+        finalHtml += "</div>";
         return finalHtml;
     }
 
-    global.$bh = bh;
+    global.$bh = av;
 
 })(window)
 
