@@ -161,7 +161,7 @@
         return finalHtml;
     }
 
-    global.$bh = av;
+    global.$av = av;
 
 })(window)
 
