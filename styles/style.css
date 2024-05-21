@@ -197,6 +197,10 @@ nav li p {
     display: table;
     clear: both;
     padding: 70px;
+    padding-bottom: 0;
+}
+.partners {
+    padding-top: 0px;
 }
 .courier-img, .partners-img {
     float: left;
@@ -206,7 +210,9 @@ nav li p {
 .courier-text, .partners-text {
     float: right;
     height: 480px;
-    /* padding-left: 250px; */
+    width: 500px;
+    margin-left: 125px;
+    margin-top: 60px;    
     color: #fff;
 }
 .courier-text h2, .partners-text h2 {
@@ -230,7 +236,7 @@ nav li p {
 }
 .partners-img {
     float: right;
-    padding-right: 70px;
+    margin-left: 41px;
 }
 .partners-text {
     float: left;
