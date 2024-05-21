@@ -61,12 +61,56 @@ nav li p {
     width: 80%;
     margin-top: 5px;
 }
+#left-side .burger-only {
+    display: none;
+}
 #square-pnu {
     background-color: #fff;
     height: 52px;
 }
 #square-pnu img {
     margin-top: -5px;
+}
+#victor-logo-burger {
+    display: none;
+    width: 100px;
+    right: 0;
+    top: 0;
+}
+.header-burger {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    margin-top: 15px;
+}
+.header-burger span {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    left: 5px;
+    background-color: #fff;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+.header-burger span:nth-child(1) {
+    transform: translateY(-12px);
+}
+.header-burger span:nth-child(3) {
+    transform: translateY(12px);
+}
+.header.open .header-burger span {
+    background-color: white;
+}
+.header.open .header-burger span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+.header.open .header-burger span:nth-child(2) {
+    opacity: 0;
+}
+.header.open .header-burger span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
 }
 /*Main Page*/
 .welcome-text {
@@ -462,6 +506,62 @@ span {
 }
 
 /*Adaptive*/
+@media(max-width: 1000px) {
+    .header-burger {
+        display: block;
+        z-index: 2;
+    }
+    #left-side {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: -400px;
+        top: 0;
+        width: 350px;
+        background-color: white;
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    #left-side li {
+        text-align: left;
+        padding: 2px 3px;
+    }
+    #left-side p {
+        color: #000;
+        font-size: 12px;
+        display: block;
+        padding: 10px 0;
+    }
+    #left-side .burger-only {
+        display: block;
+    }
+    #right-side {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: white;
+    }
+    #left-side hr {
+        display: none;
+    }
+    #victor-logo {
+        display: none;
+    }
+    #victor-logo-burger {
+        position: absolute;
+        display: block;
+        margin-top: 20px;
+        float: right;
+        right: 20px;
+    }
+    .header.open #left-side {
+        transform: translateX(100%);
+    }
+    .header.open .header-burger span {
+        background-color: #000;
+    }
+}
 @media(max-width: 767px) {
     .footer-col {
         width: 100%;
