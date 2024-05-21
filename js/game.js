@@ -5,7 +5,7 @@
     vJS.StartGame = function () {
 
         const gameHtml = "snippets/game-snippets.html";
-        
+
         document.querySelector("nav").style.display = 'none';
         document.querySelector("footer").style.display = 'none';
 
@@ -14,6 +14,7 @@
             gameHtml,
             function (responseText) {
                 document.querySelector("#main-page").innerHTML = responseText;
+                startGame();
             },
             false
         );
@@ -162,7 +163,6 @@
             window.location.href = 'main.html'; // Замість цього вкажіть правильний шлях до головної сторінки
         }
           
-        startGame();
     }
 
 
