@@ -3,6 +3,7 @@
     const av = {};
 
     const homeHtml = "snippets/home-snippets.html";
+    const gameMenuHtml = "snippets/game-snippets.html";
     const allCategoriesUrl = "data/categories.json";
     const categoryHtml = "snippets/category-snippets.html";
     const catalogItemsUrl = "data/catalog/";
@@ -160,6 +161,17 @@
         finalHtml += "</div>";
         return finalHtml;
     }
+
+    av.loadGameHtml = function () {
+
+        $ajaxifyJS.sendGetRequest(
+            gameMenuHtml,
+            function (responseText) {
+                document.querySelector("#main-page").innerHTML = responseText;
+            },
+            false
+        );
+    };
 
     global.$av = av;
 

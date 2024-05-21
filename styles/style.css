@@ -585,3 +585,92 @@ span {
     align-items: center;
     flex-grow: 1; /* Забезпечує, щоб лоадер займав увесь доступний простір */
 }
+
+
+.gameMenu {
+    text-align: center;
+    margin-top: 500px;
+}
+.box {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.box:hover {
+    transform: scale(1.05);
+}
+.box:nth-child(1) {
+    color: #007BFF;
+}
+.box:nth-child(2) {
+    color: #28A745;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 98vh;
+    background-color: lightblue;
+}
+  
+ #player {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+   
+.cake, .bomb {
+    position: absolute;
+    top: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.win-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1001;
+}
+.win-message button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
