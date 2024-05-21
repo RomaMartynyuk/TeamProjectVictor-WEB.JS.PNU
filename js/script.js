@@ -54,7 +54,7 @@
         });
     });
 
-    loadHomeHtml= function () {
+    av.loadHomeHtml= function () {
         $ajaxifyJS.sendGetRequest(
             homeHtml,
             function (responseText) {
