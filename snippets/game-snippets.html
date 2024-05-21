@@ -1,4 +1,9 @@
-<div class="gameMenu">
-    <div class="box" onclick="$vJS.StartGame();">Перший Дів</div>
-    <div class="box" onclick="$av.loadPhaser();">Другий Дів</div>
+<div class="game-container">
+    <p id="score">Score: 0</p>
+    <img src="images/game/spider-man.png" alt="Гравець" id="player">
+    <div class="win-message" id="winMessage">
+        <p>Ви перемогли!</p>
+        <button onclick="restartGame();">Переграти</button>
+        <button onclick="$av.loadHomeHtml();">Наголовну</button>
+    </div>
 </div>

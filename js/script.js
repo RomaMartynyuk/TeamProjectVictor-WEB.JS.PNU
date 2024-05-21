@@ -3,12 +3,16 @@
     const av = {};
 
     const homeHtml = "snippets/home-snippets.html";
-    const gameMenuHtml = "snippets/game-snippets.html";
+    const gameMenuHtml = "snippets/gameMenu-snippets.html";
     const allCategoriesUrl = "data/categories.json";
     const categoryHtml = "snippets/category-snippets.html";
     const catalogItemsUrl = "data/catalog/";
     const catalogItemsTitleHtml = "snippets/catalog-items-title.html";
     const catalogItemHtml = "snippets/catalog-item.html";
+
+    const nav = document.querySelector("nav");
+    const footer = document.querySelector("footer");
+
 
 
     const insertHtml = function (selector, html) {
@@ -55,6 +59,10 @@
     });
 
     av.loadHomeHtml= function () {
+
+        nav.style.display = 'block';
+        footer.style.display = 'block';
+
         $ajaxifyJS.sendGetRequest(
             homeHtml,
             function (responseText) {
