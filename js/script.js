@@ -161,6 +161,15 @@
         return finalHtml;
     }
 
+    av.loadGameHtml = function () {
+      
+        let finalHtml = "<div class='gameMenu'>";
+        finalHtml += "<div class='box'>Перший Дів</div>";
+        finalHtml += "<div class='box'>Другий Дів</div>";
+        finalHtml += "</div>";
+        document.querySelector("#main-page").innerHTML = finalHtml;
+    };
+
     global.$av = av;
 
 })(window)
