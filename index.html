@@ -10,14 +10,19 @@
     <link rel="icon" href="/images/Victor.ico">
 </head>
 <body>
-    <nav>
+    <nav class="header">
+        <button class="header-burger" id="burger">
+            <span></span><span></span><span></span>
+        </button>
         <ul id="left-side">
-            <li><img src="images/Victor.png"></li>
+            <li><img id="victor-logo" src="images/Victor.png"></li>
             <li><hr></li>
             <li><p id="navHomeButton">Головна</p></li>
             <li><p id="navCatalogButton" onclick="$av.loadCatalogCategories();">Каталог</p></li>
             <li><p>Про нас</p></li>
-        </ul>
+            <li class="burger-only"><p>FAQ</p></li>
+            <li class="burger-only"><p>Грати в гру</p></li>
+        </ul> 
         <!--<img id="logo" src="images/LogoVictor.png">-->
         <ul id="right-side">
             <li><i class="material-symbols-outlined">person</i></li>
@@ -26,6 +31,7 @@
             <li><i class="material-symbols-outlined" onclick="$av.loadGameHtml();">sports_esports</i></li>
             <li  id="square-pnu"><img src="images/LogoPnu.png"></li>
         </ul>
+        <img id="victor-logo-burger" src="images/Victor.png">
     </nav>
 
     <div id="main-page"></div>
@@ -61,6 +67,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/burger.js"></script>
     <script src="js/AjaxifyJS.js"></script>
     <script src="js/game.js"></script>
     <script src="js/carousel.js"></script>
