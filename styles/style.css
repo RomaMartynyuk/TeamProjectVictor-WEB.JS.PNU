@@ -206,7 +206,7 @@ nav li p {
 .courier-text, .partners-text {
     float: right;
     height: 480px;
-    padding-left: 250px;
+    /* padding-left: 250px; */
     color: #fff;
 }
 .courier-text h2, .partners-text h2 {
@@ -234,7 +234,7 @@ nav li p {
 }
 .partners-text {
     float: left;
-    padding-right: 250px;
+    /* padding-right: 250px; */
     padding-left: 0px;
 }
 .game-link {
