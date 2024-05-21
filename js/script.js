@@ -47,8 +47,8 @@
     document.addEventListener("DOMContentLoaded", function(event) {
         
         showLoading("#main-page");
-        loadHomeHtml();
-        document.querySelector("#navHomeButton").addEventListener("click", loadHomeHtml);
+        av.loadHomeHtml();
+        document.querySelector("#navHomeButton").addEventListener("click", av.loadHomeHtml);
         document.querySelector("img").addEventListener("click", function (){
             window.location.reload();
         });
