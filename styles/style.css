@@ -685,3 +685,8 @@ span {
     justify-content: center;
     align-items: center;
 }
+
+#background {
+    max-width: 100%;
+    max-height: 100%;
+}
