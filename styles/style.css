@@ -197,6 +197,7 @@ nav li p {
     display: table;
     clear: both;
     padding: 70px;
+    padding-bottom: 0;
 }
 .partners {
     padding-top: 0px;
