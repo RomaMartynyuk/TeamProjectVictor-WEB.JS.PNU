@@ -58,7 +58,7 @@
         $ajaxifyJS.sendGetRequest(
             homeHtml,
             function (responseText) {
-                switchActive("home");
+                //switchActive("home");
 
                 document.querySelector("#main-page").innerHTML = responseText;
             },
@@ -87,7 +87,7 @@
         $ajaxifyJS.sendGetRequest(
             categoryHtml,
             function (categoryHtml) {
-                switchActive("catalog");
+                //switchActive("catalog");
 
                 const categoriesViewHtml = buildCategoriesViewHtml(categories, categoryHtml);
                 insertHtml("#main-page", categoriesViewHtml);
@@ -124,7 +124,7 @@
                 $ajaxifyJS.sendGetRequest(
                     catalogItemHtml,
                     function (catalogItemHtml) {
-                        switchActive("catalog");
+                        //switchActive("catalog");
 
                         const catalogItemViewHtml = buildCatalogItemsViewHtml(categoryCatalogItems, catalogItemsTitleHtml, catalogItemHtml);
                         insertHtml("#main-page", catalogItemViewHtml);
