@@ -96,10 +96,9 @@
                         } else if (checkCollision(element)) {
                             if (element.classList.contains('cake')) {
                                 score++;
-                                console.log('Зіткнення тортика з гравцем!');
                             } else if (element.classList.contains('bomb')) {
                                 score = 0;
-                                console.log('Зіткнення бомби з гравцем! Гравець програв.');
+                                document.getElementById("win-message").textContent = "Ви програли!";
                             }
                             scoreText.textContent = "Score: " + score;
                             element.remove();
@@ -124,15 +123,11 @@
                     createGameElement('bomb', bombImage);
                 }
                 
-                //setInterval(createCake, 1000); // Створюємо тортик кожні 3 секунди
-                //setInterval(createBomb, 3000); // Створюємо бомбу кожні 10 секунд
-                
-                
                 function startGame() {
-                    clearInterval(gameInterval); // Очищаємо попередній інтервал, якщо він є
-                    clearInterval(gameIntervalBomb); // Очищаємо попередній інтервал, якщо він є
-                    gameInterval = setInterval(createCake, 1000); // Створюємо торти кожну секунду
-                    gameIntervalBomb = setInterval(createBomb, 1800); // Створюємо бомби кожні дві секунди
+                    clearInterval(gameInterval);
+                    clearInterval(gameIntervalBomb); 
+                    gameInterval = setInterval(createCake, 1000); 
+                    gameIntervalBomb = setInterval(createBomb, 1800);
                 }
                 
                 function stopGame() {
@@ -145,18 +140,7 @@
                 function showWinMessage() {
                     winMessage.style.display = 'block';
                 }
-                
-                function restartGame() {
-                    score = 0;
-                    scoreDisplay.textContent = 'Score: ' + score;
-                    winMessage.style.display = 'none';
-                    startGame();
-                }
-                
-                function goToMain() {
-                    window.location.href = 'main.html'; // Замість цього вкажіть правильний шлях до головної сторінки
-                }
-                        
+                    
                 startGame();
             },
             false

@@ -32,22 +32,6 @@
         return string;
     }
 
-    const switchActive = function (activeElement) {
-        
-        const homeButton = document.querySelector("#navHomeButton");
-        const catalogButton = document.querySelector("#navCatalogButton");
-    
-        if (activeElement === "catalog") {
-            homeButton.classList.remove("active");
-            catalogButton.classList.add("active");
-        } else if (activeElement === "home") {
-            catalogButton.classList.remove("active");
-            homeButton.classList.add("active");
-        }    
-      
-    }
-
-
     document.addEventListener("DOMContentLoaded", function(event) {
         
         showLoading("#main-page");
@@ -66,9 +50,8 @@
         $ajaxifyJS.sendGetRequest(
             homeHtml,
             function (responseText) {
-                //switchActive("home");
-
                 document.querySelector("#main-page").innerHTML = responseText;
+                $carousel.Rotate();
             },
             false
         );
@@ -95,8 +78,6 @@
         $ajaxifyJS.sendGetRequest(
             categoryHtml,
             function (categoryHtml) {
-                //switchActive("catalog");
-
                 const categoriesViewHtml = buildCategoriesViewHtml(categories, categoryHtml);
                 insertHtml("#main-page", categoriesViewHtml);
             },
@@ -132,8 +113,6 @@
                 $ajaxifyJS.sendGetRequest(
                     catalogItemHtml,
                     function (catalogItemHtml) {
-                        //switchActive("catalog");
-
                         const catalogItemViewHtml = buildCatalogItemsViewHtml(categoryCatalogItems, catalogItemsTitleHtml, catalogItemHtml);
                         insertHtml("#main-page", catalogItemViewHtml);
                     },
