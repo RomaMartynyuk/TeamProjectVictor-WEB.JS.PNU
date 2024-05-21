@@ -676,7 +676,7 @@ span {
 }
 
 #game-container {
-    background-image: url("../images/game/back.png");
+    background-image: url("../images/game/ground.png");
     background-size: cover;
     position: relative;
     width: 100%;
@@ -684,9 +684,4 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#background {
-    max-width: 100%;
-    max-height: 100%;
 }
