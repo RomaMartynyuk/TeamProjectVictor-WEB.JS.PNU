@@ -101,14 +101,14 @@
             }
         
             Phaser.Actions.Call(sweets.getChildren(), function(sweet) {
-                if (sweet.y > window.innerHeight) {
+                if (sweet.y > window.innerHeight - sweet.height * 0.8) {
                     sweet.disableBody(true, true);
                     sweet.destroy();
                 }
             }, this);
         
             Phaser.Actions.Call(bombs.getChildren(), function(bomb) {
-                if (bomb.y > window.innerHeight) {
+                if (bomb.y > window.innerHeight - bomb.height * 0.8) {
                     bomb.disableBody(true, true);
                     bomb.destroy();
                 }
@@ -142,8 +142,8 @@
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
-                winText = this.add.text(430, 50, 'You Win!', { fontSize: '80px', fill: '#fff' });
-                textTimerDel = this.add.text(430, 125, timerText.text, { fontSize: '70px', fill: '#fff' });
+                winText = this.add.text(window.innerWidth / 2, 50, 'You Win!', { fontSize: '80px', fill: '#fff' });
+                textTimerDel = this.add.text(window.innerWidth / 2, 125, timerText.text, { fontSize: '70px', fill: '#fff' });
         
                 createButtons.call(this);
             }
