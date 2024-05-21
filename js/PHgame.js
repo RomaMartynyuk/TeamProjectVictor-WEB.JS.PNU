@@ -49,7 +49,7 @@
         
         function preload() {
             //this.load.image('ground', 'assets/platform.png', { frameWidth: 50, frameHeight: 50 });
-            this.load.image('background', 'images/game/back.png');
+            //this.load.image('background', 'images/game/back.png');
             this.load.image('sweet1', 'images/game/sweet1.png');
             this.load.image('sweet2', 'images/game/sweet2.png');
             this.load.image('sweet3', 'images/game/sweet3.png');
@@ -58,7 +58,7 @@
         }
         
         function create() {
-            this.add.image(640, 295, 'background');
+            //this.add.image(640, 295, 'background');
         
             player = this.physics.add.sprite(400, 500, 'dude');
             player.setCollideWorldBounds(true);
@@ -142,9 +142,9 @@
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
-                winText = this.add.text(window.innerWidth / 2, 50, 'You Win!', { fontSize: '80px', fill: '#fff' });
+                winText = this.add.text(window.innerWidth / 2, 50, 'You Win!', { fontSize: '80px', fill: '#000' });
                 winText.setOrigin(0.5, 0);
-                textTimerDel = this.add.text(window.innerWidth / 2, 125, timerText.text, { fontSize: '70px', fill: '#fff' });
+                textTimerDel = this.add.text(window.innerWidth / 2, 125, timerText.text, { fontSize: '70px', fill: '#000' });
                 textTimerDel.setOrigin(0.5, 0);
         
                 createButtons.call(this);
@@ -160,7 +160,7 @@
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
-                gameOverText = this.add.text(window.innerWidth / 2, 100, 'Game Over', { fontSize: '80px', fill: '#fff' });
+                gameOverText = this.add.text(window.innerWidth / 2, 100, 'Game Over', { fontSize: '80px', fill: '#000' });
                 textTimerDel.setOrigin(0.5, 0);
                 
                 createButtons.call(this);
@@ -168,14 +168,14 @@
         }
         
         function createButtons() {
-            restartButton = this.add.text(window.innerWidth / 2, 400, 'Restart', { fontSize: '40px', fill: '#fff' })
+            restartButton = this.add.text(window.innerWidth / 2, 400, 'Restart', { fontSize: '40px', fill: '#000' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     restartGame.call(this);
                 });
                 restartButton.setOrigin(0.5, 0);
 
-            mainPageButton = this.add.text(window.innerWidth / 2, 450, 'Main Page', { fontSize: '40px', fill: '#fff' })
+            mainPageButton = this.add.text(window.innerWidth / 2, 450, 'Main Page', { fontSize: '40px', fill: '#000' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     $av.loadHomeHtml();
