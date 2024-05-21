@@ -49,7 +49,7 @@
         
         function preload() {
             //this.load.image('ground', 'assets/platform.png', { frameWidth: 50, frameHeight: 50 });
-            //this.load.image('background', 'images/game/back.png');
+            this.load.image('background', 'images/game/back.png');
             this.load.image('sweet1', 'images/game/sweet1.png');
             this.load.image('sweet2', 'images/game/sweet2.png');
             this.load.image('sweet3', 'images/game/sweet3.png');
@@ -58,8 +58,10 @@
         }
         
         function create() {
-            //this.add.image(640, 295, 'background');
-        
+            const background = this.add.image(0, 0, 'background').setOrigin(0);
+            background.displayWidth = this.sys.game.config.width;
+            background.displayHeight = this.sys.game.config.height;        
+            
             player = this.physics.add.sprite(400, 500, 'dude');
             player.setCollideWorldBounds(true);
         
