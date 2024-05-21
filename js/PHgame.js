@@ -6,6 +6,8 @@
 
         document.querySelector("nav").style.display = 'none';
         document.querySelector("footer").style.display = 'none';
+        document.querySelector("#main-page").innerHTML = '<div id="game-container"></div>';
+
 
         const config = {
             type: Phaser.AUTO,
