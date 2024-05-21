@@ -3,6 +3,7 @@
     const av = {};
 
     const homeHtml = "snippets/home-snippets.html";
+    const gameMenuHtml = "snippets/game-snippets.html";
     const allCategoriesUrl = "data/categories.json";
     const categoryHtml = "snippets/category-snippets.html";
     const catalogItemsUrl = "data/catalog/";
@@ -163,10 +164,6 @@
 
     av.loadGameHtml = function () {
       
-        let finalHtml = "<div class='gameMenu'>";
-        finalHtml += "<div class='box'>Перший Дів</div>";
-        finalHtml += "<div class='box'>Другий Дів</div>";
-        finalHtml += "</div>";
         document.querySelector("#main-page").innerHTML = finalHtml;
     };
 
