@@ -142,10 +142,10 @@
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
-                winText.setOrigin(0.5, 0);
                 winText = this.add.text(window.innerWidth / 2, 50, 'You Win!', { fontSize: '80px', fill: '#fff' });
-                textTimerDel.setOrigin(0.5, 0);
+                winText.setOrigin(0.5, 0);
                 textTimerDel = this.add.text(window.innerWidth / 2, 125, timerText.text, { fontSize: '70px', fill: '#fff' });
+                textTimerDel.setOrigin(0.5, 0);
         
                 createButtons.call(this);
             }
@@ -160,27 +160,28 @@
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
-                textTimerDel.setOrigin(0.5, 0);
                 gameOverText = this.add.text(window.innerWidth / 2, 100, 'Game Over', { fontSize: '80px', fill: '#fff' });
+                textTimerDel.setOrigin(0.5, 0);
                 
                 createButtons.call(this);
             }
         }
         
         function createButtons() {
-            restartButton.setOrigin(0.5, 0);
             restartButton = this.add.text(window.innerWidth / 2, 400, 'Restart', { fontSize: '40px', fill: '#fff' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     restartGame.call(this);
                 });
+                restartButton.setOrigin(0.5, 0);
 
-                mainPageButton.setOrigin(0.5, 0);
             mainPageButton = this.add.text(window.innerWidth / 2, 450, 'Main Page', { fontSize: '40px', fill: '#fff' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     $av.loadHomeHtml();
                 });
+                mainPageButton.setOrigin(0.5, 0);
+
         }
         
         function restartGame() {
