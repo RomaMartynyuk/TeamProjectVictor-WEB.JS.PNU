@@ -4,6 +4,9 @@
     
     ph.StartGame = function () {
 
+        document.querySelector("nav").style.display = 'none';
+        document.querySelector("footer").style.display = 'none';
+
         const config = {
             type: Phaser.AUTO,
             width: 1280,
