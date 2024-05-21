@@ -3,7 +3,7 @@
     const vJS = {};
     
     vJS.StartGame = function () {
-        document.querySelector("body").innerHTML = '<div class="game-container"><p id="score">Score: 0</p><img src="images/game/spider-man.png" alt="Гравець" id="player"><div class="win-message" id="winMessage"><p>Ви перемогли!</p><button onclick="restartGame()">Переграти</button><button onclick="goToMain()">Наголовну</button></div></div>';
+        document.querySelector("body").innerHTML = '<div class="game-container"><p id="score">Score: 0</p><img src="images/game/spider-man.png" alt="Гравець" id="player"><div class="win-message" id="winMessage"><p>Ви перемогли!</p><button onclick="restartGame();">Переграти</button><button onclick="$av.loadHomeHtml();">Наголовну</button></div></div>';
 
 
         const player = document.getElementById('player');
