@@ -1,28 +1,42 @@
 [{
   "id": 1,
-  "full_name": "Фентезі",
-  "short_name": "fantasy",
+  "full_name": "Морозиво",
+  "short_name": "ice-cream",
   "notes": "",
-  "url": "data/catalog/fantasy.json"
+  "url": "data/catalog/ice-cream.json"
 },
 {
   "id": 2,
-  "full_name": "Детективи",
-  "short_name": "detectives",
+  "full_name": "Торти",
+  "short_name": "cakes",
   "notes": "",
-  "url": "data/catalog/detectives.json"
+  "url": "data/catalog/cakes.json"
 },
 {
   "id": 3,
-  "full_name": "Фантастика",
-  "short_name": "speculative_fiction",
+  "full_name": "Круасани",
+  "short_name": "croissants",
   "notes": "",
-  "url": "data/catalog/speculative_fiction.json"
+  "url": "data/catalog/croissants.json"
 },
 {
   "id": 4,
-  "full_name": "Трилери та жахи",
-  "short_name": "horrors_trillers",
+  "full_name": "Шоколад",
+  "short_name": "chocolates",
   "notes": "",
-  "url": "data/catalog/horrors_trillers.json"
+  "url": "data/catalog/chocolates.json"
+},
+{
+  "id": 5,
+  "full_name": "Печиво",
+  "short_name": "cookies",
+  "notes": "",
+  "url": "data/catalog/cookies.json"
+},
+{
+  "id": 6,
+  "full_name": "Сезонні",
+  "short_name": "season",
+  "notes": "",
+  "url": "data/catalog/season.json"
 }]
