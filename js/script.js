@@ -163,8 +163,14 @@
     }
 
     av.loadGameHtml = function () {
-      
-        document.querySelector("#main-page").innerHTML = finalHtml;
+
+        $ajaxifyJS.sendGetRequest(
+            gameMenuHtml,
+            function (responseText) {
+                document.querySelector("#main-page").innerHTML = responseText;
+            },
+            false
+        );
     };
 
     global.$av = av;
