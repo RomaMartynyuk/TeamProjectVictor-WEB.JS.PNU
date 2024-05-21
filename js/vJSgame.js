@@ -8,12 +8,14 @@
 
         document.querySelector("nav").style.display = 'none';
         document.querySelector("footer").style.display = 'none';
-
     
         $ajaxifyJS.sendGetRequest(
             gameHtml,
             function (responseText) {
                 document.querySelector("#main-page").innerHTML = responseText;
+
+                document.querySelector("#background").style.width = "100%";;
+                document.querySelector("#background").style.height = "100%";;
                 
                 const player = document.getElementById('player');
                 let direction = 'right';
