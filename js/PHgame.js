@@ -54,13 +54,14 @@
             this.load.image('sweet2', 'images/game/sweet2.png');
             this.load.image('sweet3', 'images/game/sweet3.png');
             this.load.image('bomb', 'images/game/bomb.png');
-            this.load.spritesheet('dude', 'images/game/spider-man.png', { frameWidth: 100, frameHeight: 100 });
+            this.load.spritesheet('dude', 'images/game/dude.png', { frameWidth: 100, frameHeight: 100 });
         }
         
         function create() {
             const background = this.add.image(0, 0, 'background').setOrigin(0);
-            background.displayWidth = this.sys.game.config.width;
-            background.displayHeight = this.sys.game.config.height;        
+                background.displayWidth = this.sys.game.config.width;
+            background.displayHeight = this.sys.game.config.height;
+            
             
             player = this.physics.add.sprite(400, 500, 'dude');
             player.setCollideWorldBounds(true);
@@ -159,11 +160,12 @@
             scoreText.setText('Score: ' + score);
         
             if (score < 0) {
+                scoreText.setText('Score: 0');
                 gameOver = true;
                 this.physics.pause();
                 objectGenerator.remove();
                 gameOverText = this.add.text(window.innerWidth / 2, 100, 'Game Over', { fontSize: '80px', fill: '#000' });
-                textTimerDel.setOrigin(0.5, 0);
+                gameOverText.setOrigin(0.5, 0);
                 
                 createButtons.call(this);
             }
