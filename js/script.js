@@ -139,7 +139,7 @@
         catalogItemsTitleHtml = insertProperty(catalogItemsTitleHtml, "full_name", categoryCatalogItems.category.full_name);
 
         let finalHtml = "<div class='products-page'>";
-        finalHtml = catalogItemsTitleHtml;
+        finalHtml += catalogItemsTitleHtml;
         finalHtml += "<div class='products'>";
 
         const catalogItems = categoryCatalogItems.catalog_items;
