@@ -15,14 +15,14 @@
 {
   "id": 3,
   "full_name": "Круасани",
-  "short_name": "croissants",
+  "short_name": "croissant",
   "notes": "",
   "url": "data/catalog/croissants.json"
 },
 {
   "id": 4,
   "full_name": "Шоколад",
-  "short_name": "chocolates",
+  "short_name": "chocolate",
   "notes": "",
   "url": "data/catalog/chocolates.json"
 },
