@@ -101,14 +101,14 @@
             }
         
             Phaser.Actions.Call(sweets.getChildren(), function(sweet) {
-                if (sweet.y > 550) {
+                if (sweet.y > window.innerHeight) {
                     sweet.disableBody(true, true);
                     sweet.destroy();
                 }
             }, this);
         
             Phaser.Actions.Call(bombs.getChildren(), function(bomb) {
-                if (bomb.y > 555) {
+                if (bomb.y > window.innerHeight) {
                     bomb.disableBody(true, true);
                     bomb.destroy();
                 }
