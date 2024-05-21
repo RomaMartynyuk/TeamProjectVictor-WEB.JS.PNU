@@ -71,8 +71,8 @@
             sweets = this.physics.add.group();
             bombs = this.physics.add.group();
         
-            scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '40px', fill: '#fff' });
-            timerText = this.add.text(16, 50, 'Time: 0', { fontSize: '40px', fill: '#fff' });
+            scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '40px', fill: '#000' });
+            timerText = this.add.text(16, 50, 'Time: 0', { fontSize: '40px', fill: '#000' });
         
             startTime = this.time.now;
         
@@ -172,14 +172,14 @@
         }
         
         function createButtons() {
-            restartButton = this.add.text(window.innerWidth / 2, 400, 'Restart', { fontSize: '40px', fill: '#000' })
+            restartButton = this.add.text(window.innerWidth / 2, 475, 'Restart', { fontSize: '40px', fill: '#fff' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     restartGame.call(this);
                 });
                 restartButton.setOrigin(0.5, 0);
 
-            mainPageButton = this.add.text(window.innerWidth / 2, 450, 'Main Page', { fontSize: '40px', fill: '#000' })
+            mainPageButton = this.add.text(window.innerWidth / 2, 525, 'Main Page', { fontSize: '40px', fill: '#fff' })
                 .setInteractive()
                 .on('pointerdown', () => {
                     $av.loadHomeHtml();
