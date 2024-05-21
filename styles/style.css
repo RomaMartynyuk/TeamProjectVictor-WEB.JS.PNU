@@ -206,7 +206,9 @@ nav li p {
 .courier-text, .partners-text {
     float: right;
     height: 480px;
-    /* padding-left: 250px; */
+    width: 500px;
+    margin-left: 125px;
+    margin-top: 60px;    
     color: #fff;
 }
 .courier-text h2, .partners-text h2 {
