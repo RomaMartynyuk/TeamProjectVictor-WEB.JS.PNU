@@ -2,7 +2,7 @@
 
     const vJS = {};
     
-    $vJS.StartGame = function () {
+    vJS.StartGame = function () {
         const player = document.getElementById('player');
         let direction = 'right';
         const speed = 20;
