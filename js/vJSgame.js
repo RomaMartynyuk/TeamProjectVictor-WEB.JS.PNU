@@ -158,16 +158,8 @@
                 startGame();
             },
             false
-        );
-
-
-        //document.querySelector("body").innerHTML = '<div class="game-container"><p id="score">Score: 0</p><img src="images/game/spider-man.png" alt="Гравець" id="player"><div class="win-message" id="winMessage"><p>Ви перемогли!</p><button onclick="restartGame();">Переграти</button><button onclick="$av.loadHomeHtml();">Наголовну</button></div></div>';
-
-
-        
-          
+        );  
     }
-
 
     global.$vJS = vJS;
 
