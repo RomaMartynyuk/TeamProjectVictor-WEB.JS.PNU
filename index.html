@@ -36,6 +36,54 @@
         <img id="victor-logo-burger" src="images/Victor.png">
     </nav>
 
+    <div class="welcome-text">
+        <h1>Вас вітає Victor — магазин кондитерських виробів</h1>
+        <p>Обожнюєте шоколадні торти? Чи вам більше до вподоби солодкі французькі круасани? Час від часу ласуєте морозивом? З Victor ви напевне знайдете те, що смакуватиме саме вам.</p>
+        <button onclick="$av.loadCatalogCategories();">До товарів</button>
+    </div>
+    <section aria-label="our-products">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#8678;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8680;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carousel Image 1">
+                </li>
+                <li class="slide">
+                    <img src="https://images.unsplash.com/photo-1586985290301-8db40143d525?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carousel Image 2">
+                </li>
+                <li class="slide">
+                    <img src="https://images.unsplash.com/photo-1629385701021-fcd568a743e8?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carousel Image 3">
+                </li>
+                <li class="slide">
+                    <img src="https://images.unsplash.com/photo-1645802734040-26f0265830c7?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carousel Image 4">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="courier">
+        <img src="images/courier.png" class="courier-img">
+        <div class="courier-text">
+            <h2>Доставка по всій країні!</h2>
+            <p>Ми доставляємо товари свіжоспеченими у всіх великих містах нашої країни.</p>
+            <button>Наші заклади</button>
+        </div>
+    </div>
+    <div class="partners">
+        <div class="partners-text">
+            <h2>Стати партнером</h2>
+            <p>Прискорюйте зростання бізнесу разом із Victor! З вас товар, з нас покупець!</p>
+            <button>Дізнатись більше</button>
+        </div>
+        <img src="images/partner.png" class="partners-img">
+    </div>
+    <div class="game-link">
+        <h2>Бажаєте знижку?</h2>
+        <p>Зіграйте у гру, здобудьте перемогу та отримайте 10% знижкуна будь-які товари нашого магазину!</p>
+        <button onclick="$av.loadGameHtml();">Зіграти в гру</button>
+    </div>
+    
+
     <div id="main-page"></div>
     
     <footer class="footer">

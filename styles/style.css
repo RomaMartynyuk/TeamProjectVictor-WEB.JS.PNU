@@ -149,6 +149,12 @@ nav li p {
     cursor: pointer;
     margin-left: 75px;
 }
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 .main-page .categories-header {
     margin-left: 75px;
     font-size: 64px;
@@ -195,36 +201,42 @@ nav li p {
     padding: 45px;
 }
 .courier, .partners {
-    box-sizing: border-box;
-    display: table;
-    clear: both;
-    padding: 70px;
-    padding-bottom: 0;
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    padding: 70px 0;
+    margin-top: 50px;
 }
+
 .partners {
     padding-top: 0px;
 }
+
 .courier-img, .partners-img {
-    float: left;
     border-radius: 15px;
     width: 713px;
+    max-width: 100%; /* Додаємо для адаптивності */
 }
+
 .courier-text, .partners-text {
-    float: right;
-    height: 480px;
-    width: 500px;
-    margin-left: 125px;
-    margin-top: 60px;    
     color: #fff;
+    width: 500px;
+    max-width: 100%; /* Додаємо для адаптивності */
 }
+
 .courier-text h2, .partners-text h2 {
     font-size: 40px;
     font-weight: 800;
 }
+
 .courier-text p, .partners-text p {
     font-size: 32px;
     max-width: 630px;
 }
+
 .courier-text button, .partners-text button, .game-link button {
     border-radius: 15px;
     border-width: 0;
@@ -236,18 +248,14 @@ nav li p {
     color: #fff;
     cursor: pointer;
 }
+
 .partners-img {
-    float: right;
     margin-left: 41px;
-}
-.partners-text {
-    float: left;
-    /* padding-right: 250px; */
-    padding-left: 0px;
 }
 .game-link {
     margin: 0 auto;
     margin-bottom: 20px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,7 +264,7 @@ nav li p {
     background-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 100%), url("../images/partner.png");
     background-size: cover;
     background-position: center;
-    width: 1450px;
+    width: 1150px;
     height: 480px;
     border-radius: 15px;
     color: #fff;
@@ -514,6 +522,45 @@ span {
 }
 
 /*Adaptive*/
+@media(max-width: 1250px) {
+    .welcome-text {
+        width: 1250px;
+    }
+    .carousel {
+        width: 1250px;
+    }
+    .footer {
+        width: 1250px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 1190px) {
+    .game-link {
+        width: 800px;
+        padding: 100px;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .courier, .partners {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+    }
+    .courier-img, .partners-img, .courier-text, .partners-text {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .partners-img {
+        margin-left: 0;
+    }
+    .courier-text, .partners-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
 @media(max-width: 1000px) {
     .header-burger {
         display: block;
@@ -570,20 +617,7 @@ span {
         background-color: #000;
     }
 }
-@media(max-width: 767px) {
-    .footer-col {
-        width: 100%;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-}
-@media(max-width: 574px) {
-    .footer-col {
-        width: 100%;
-    }
-}
+
 
 .loader {
     margin-top: 200px;
@@ -591,7 +625,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Забезпечує, щоб лоадер займав увесь доступний простір */
+    flex-grow: 1;
 }
 
 
@@ -728,7 +762,7 @@ span {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 1500px;
     margin-top: 80px;
     color: #fff;
     background-image: url("../images/aboutUsBg.jpg");
@@ -742,7 +776,7 @@ span {
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 15px;
-    margin-top: 200px;
+    margin-top: -100px;
     width: 200px;
     border-radius: 15px;
 }
