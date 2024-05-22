@@ -4,6 +4,7 @@
 
     const homeHtml = "snippets/home-snippets.html";
     const gameMenuHtml = "snippets/gameMenu-snippets.html";
+    const aboutUsHtml = "snippets/aboutUs-snippets.html";
     const allCategoriesUrl = "data/categories.json";
     const categoryHtml = "snippets/category-snippets.html";
     const catalogItemsUrl = "data/catalog/";
@@ -153,6 +154,17 @@
 
         $ajaxifyJS.sendGetRequest(
             gameMenuHtml,
+            function (responseText) {
+                document.querySelector("#main-page").innerHTML = responseText;
+            },
+            false
+        );
+    };
+
+    av.loadAboutUsHtml = function () {
+
+        $ajaxifyJS.sendGetRequest(
+            aboutUsHtml,
             function (responseText) {
                 document.querySelector("#main-page").innerHTML = responseText;
             },

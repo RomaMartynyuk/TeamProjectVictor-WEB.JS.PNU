@@ -97,12 +97,17 @@
                             if (element.classList.contains('cake')) {
                                 score++;
                             } else if (element.classList.contains('bomb')) {
-                                score = 0;
-                                document.getElementById("win-message").textContent = "Ви програли!";
+                                score -= 5;
                             }
                             scoreText.textContent = "Score: " + score;
                             element.remove();
                             if (score === 10) {
+                                stopGame();
+                                showWinMessage();
+                            }
+                            if (score < 0) {
+                                scoreText.textContent = "Score: 0";
+                                document.getElementById("win-message").textContent = "Ви програли!";
                                 stopGame();
                                 showWinMessage();
                             }
