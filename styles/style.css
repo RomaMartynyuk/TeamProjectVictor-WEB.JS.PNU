@@ -202,9 +202,11 @@ nav li p {
     width: 350px;
     height: 300px;
     cursor: pointer;
+    transition: .5s
 }
 .categories-card:hover {
     background-color: #3C3C3C;
+    transition: .5s;
 }
 .categories-card img {
     height: 130px;
@@ -560,6 +562,11 @@ span {
 }
 
 /*Adaptive*/
+@media(max-width: 1440px) {
+    .categories {
+        grid-template-columns: auto auto;
+    }
+}
 @media(max-width: 1250px) {
     .welcome-text {
         width: 1250px;
