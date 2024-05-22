@@ -94,11 +94,16 @@
                         if (top >= window.innerHeight) {
                             element.remove();
                         } else if (checkCollision(element)) {
+                            if (score < 0) {
+                                document.getElementById("win-message").textContent = "Ви програли!";
+                                stopGame();
+                                showWinMessage();
+                                score = 0;
+                            }
                             if (element.classList.contains('cake')) {
                                 score++;
                             } else if (element.classList.contains('bomb')) {
-                                score = 0;
-                                document.getElementById("win-message").textContent = "Ви програли!";
+                                score -= 5;
                             }
                             scoreText.textContent = "Score: " + score;
                             element.remove();
