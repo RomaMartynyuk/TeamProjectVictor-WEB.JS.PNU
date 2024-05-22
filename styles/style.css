@@ -38,6 +38,11 @@ nav li p {
     padding: 14px 16px;
     text-decoration: none;
     cursor: pointer;
+    transition: .5s;
+}
+#left-side li:hover {
+    color: #FCCB06;
+    transition: 0.5s;
 }
 #right-side li {
     float: right;
@@ -52,6 +57,11 @@ nav li p {
 #right-side li i {
     font-size: 45px;
     font-weight: normal;
+    transition: 0.5s;
+}
+#right-side li i:hover {
+    color: #FCCB06;
+    transition: 0.5s;
 }
 #left-side hr {
     color: white;
@@ -148,6 +158,11 @@ nav li p {
     font-weight: bold;
     cursor: pointer;
     margin-left: 75px;
+    transition: .5s;
+}
+.welcome-text button:hover {
+    background-color: #181818;
+    transition: 0.5s;
 }
 .main-page {
     display: flex;
@@ -188,6 +203,9 @@ nav li p {
     height: 300px;
     cursor: pointer;
 }
+.categories-card:hover {
+    background-color: #3C3C3C;
+}
 .categories-card img {
     height: 130px;
     width: 130px;
@@ -200,13 +218,22 @@ nav li p {
     font-weight: 600;
     padding: 45px;
 }
+.partner-and-courier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .courier, .partners {
-    display: inline-block;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    align-content: center;
-    gap: 20px;
+    gap: 50px;
     padding: 70px 0;
     margin-top: 50px;
 }
@@ -247,6 +274,11 @@ nav li p {
     background-color: #000000;
     color: #fff;
     cursor: pointer;
+    transition: .5s;
+}
+.courier-text button:hover, .partners-text button:hover, .game-link button:hover {
+    background-color: #2B2B2B;
+    transition: .5s;
 }
 
 .partners-img {
@@ -255,7 +287,7 @@ nav li p {
 .game-link {
     margin: 0 auto;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -433,6 +465,12 @@ span {
     background-color: #000;
     cursor: pointer;
     outline: none;
+    transition: .5s;
+}
+.product-price-btn button:hover {
+    color: #000;
+    background-color: #fff;
+    transition: .5s;
 }
 .footer {
     background-color: #000000;
@@ -538,27 +576,7 @@ span {
     .game-link {
         width: 800px;
         padding: 100px;
-        margin-top: 50px;
         justify-content: center;
-    }
-    .courier, .partners {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 20px;
-    }
-    .courier-img, .partners-img, .courier-text, .partners-text {
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .partners-img {
-        margin-left: 0;
-    }
-    .courier-text, .partners-text {
-        margin-left: 0;
-        margin-top: 20px;
     }
 }
 @media(max-width: 1000px) {
@@ -617,7 +635,34 @@ span {
         background-color: #000;
     }
 }
+@media (max-width: 768px) {
+    .partner-and-courier {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 20px;
+    }
 
+    .courier, .partners {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 0;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .partner-and-courier {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .courier, .partners {
+        gap: 20px;
+        padding: 30px 0;
+        margin-top: 10px;
+    }
+}
 
 .loader {
     margin-top: 200px;
